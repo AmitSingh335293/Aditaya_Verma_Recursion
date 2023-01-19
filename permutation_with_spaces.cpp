@@ -12,9 +12,9 @@ void solve(string ip,string op)
   }
   string op1 = op;
   string op2 = op;
-  op1.push_back('_');
-  op1.push_back(ip[0]);
-  op2.push_back(ip[0]);
+  op1.push_back('_');    // first choice - with space so first add space
+  op1.push_back(ip[0]);   // now add char
+  op2.push_back(ip[0]);   // Second choice - without space add char 
   ip.erase(ip.begin()+0);
   solve(ip,op1);
   solve(ip,op2);
